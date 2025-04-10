@@ -1,6 +1,8 @@
 package ec.edu.ups.clases;
 
+import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
+
 
 public class Visitante extends Persona {
 
@@ -44,10 +46,11 @@ public class Visitante extends Persona {
 
     @Override
     public String toString() {
-        return "Visitante{" +
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        return super.toString()+"Visitante{" +
                 "motivo='" + motivo + '\'' +
-                ", fechaEntrada=" + fechaEntrada +
-                ", fechaSalida=" + fechaSalida +
+                ", fechaEntrada=" + formato.format(fechaEntrada.getTime()) +
+                ", fechaSalida=" + formato.format(fechaSalida.getTime()) +
                 '}';
     }
 }
