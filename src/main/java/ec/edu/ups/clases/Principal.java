@@ -27,7 +27,7 @@ public class Principal {
         administrativo.getResponsabilidades().add("Gestión Administrativa");
 
         Visitante visitante = new Visitante("0405060708", "María", "Ramos", "0965432109", "maria@mail.com", "Charla sobre Innovación Educativa",
-                new GregorianCalendar(2024, 4, 10), new GregorianCalendar(2024, 4, 12));
+                new GregorianCalendar(2024, 4, 10, 16,14,33), new GregorianCalendar(2024, 4, 10, 18,04,00));
 
         // Asignaciones
         GregorianCalendar fechaEstudiante = new GregorianCalendar(2024, 4, 10);

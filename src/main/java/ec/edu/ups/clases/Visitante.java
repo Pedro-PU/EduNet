@@ -46,7 +46,7 @@ public class Visitante extends Persona {
 
     @Override
     public String toString() {
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy H:mm:ss");
         return super.toString()+"Visitante{" +
                 "motivo='" + motivo + '\'' +
                 ", fechaEntrada=" + formato.format(fechaEntrada.getTime()) +
