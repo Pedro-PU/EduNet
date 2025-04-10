@@ -1,12 +1,13 @@
 package ec.edu.ups.clases;
 
 public class Estudiante extends Persona{
+
     private String carrera;
 
-    public Estudiante() {}
+    public Estudiante(){}
 
-    public Estudiante(String cedula, String nombre, String apellido, String telefono, String correoElectronico, String carrera) {
-        super(cedula, nombre, apellido, telefono, correoElectronico);
+    public Estudiante(String cedula, String nombre, String apellido, String telefono, String correo, String carrera){
+        super(cedula, nombre, apellido, telefono, correo);
         this.carrera = carrera;
     }
 

@@ -1,23 +1,18 @@
 package ec.edu.ups.clases;
 
+import java.util.GregorianCalendar;
 import ec.edu.ups.enums.Rol;
 
-import java.util.GregorianCalendar;
-
 public class Asignacion {
+
     private Persona persona;
-    private Institucion institucion;
-    private Direccion direccion;
     private GregorianCalendar fechaInicio;
     private Rol rol;
 
+    public Asignacion(){}
 
-    public Asignacion() {}
-
-    public Asignacion(Persona persona, Institucion institucion, Direccion direccion, GregorianCalendar fechaInicio, Rol rol) {
+    public Asignacion(Persona persona, GregorianCalendar fechaInicio, Rol rol){
         this.persona = persona;
-        this.institucion = institucion;
-        this.direccion = direccion;
         this.fechaInicio = fechaInicio;
         this.rol = rol;
     }
@@ -28,22 +23,6 @@ public class Asignacion {
 
     public void setPersona(Persona persona) {
         this.persona = persona;
-    }
-
-    public Institucion getInstitucion() {
-        return institucion;
-    }
-
-    public void setInstitucion(Institucion institucion) {
-        this.institucion = institucion;
-    }
-
-    public Direccion getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
     }
 
     public GregorianCalendar getFechaInicio() {
@@ -66,8 +45,6 @@ public class Asignacion {
     public String toString() {
         return "Asignacion{" +
                 "persona=" + persona +
-                ", institucion=" + institucion +
-                ", direccion=" + direccion +
                 ", fechaInicio=" + fechaInicio +
                 ", rol=" + rol +
                 '}';

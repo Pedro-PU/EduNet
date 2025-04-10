@@ -8,19 +8,19 @@ public class Persona {
     private String nombre;
     private String apellido;
     private String telefono;
-    private String correoElectronico;
+    private String correo;
     private List<Direccion> direcciones;
 
-    public Persona() {
+    public Persona(){
         this.direcciones = new ArrayList<>();
     }
 
-    public Persona(String cedula, String nombre, String apellido, String telefono, String correoElectronico) {
+    public Persona(String cedula, String nombre, String apellido, String telefono, String correo){
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
-        this.correoElectronico = correoElectronico;
+        this.correo = correo;
         this.direcciones = new ArrayList<>();
     }
 
@@ -56,19 +56,18 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    public String getCorreoElectronico() {
-        return correoElectronico;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void addDireccion(Direccion direccion) {
-        this.direcciones.add(direccion);
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    public void addDireccion(Direccion direccion){
+        direcciones.add(direccion);
     }
     public List<Direccion> getDirecciones() {
         return direcciones;
-    }
-
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
     }
 
     @Override
@@ -78,7 +77,7 @@ public class Persona {
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", correoElectronico='" + correoElectronico + '\'' +
+                ", correo='" + correo + '\'' +
                 ", direcciones=" + direcciones +
                 '}';
     }

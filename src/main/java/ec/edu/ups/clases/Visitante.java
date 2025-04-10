@@ -3,14 +3,16 @@ package ec.edu.ups.clases;
 import java.util.GregorianCalendar;
 
 public class Visitante extends Persona {
+
     private String motivo;
     private GregorianCalendar fechaEntrada;
     private GregorianCalendar fechaSalida;
 
-    public Visitante() {}
+    public Visitante() {
+    }
 
-    public Visitante(String cedula, String nombre, String apellido, String telefono, String correoElectronico, String motivo, GregorianCalendar fechaEntrada, GregorianCalendar fechaSalida) {
-        super(cedula, nombre, apellido, telefono, correoElectronico);
+    public Visitante(String cedula, String nombre, String apellido, String telefono, String correo, String motivo, GregorianCalendar fechaEntrada, GregorianCalendar fechaSalida) {
+        super(cedula, nombre, apellido, telefono, correo);
         this.motivo = motivo;
         this.fechaEntrada = fechaEntrada;
         this.fechaSalida = fechaSalida;

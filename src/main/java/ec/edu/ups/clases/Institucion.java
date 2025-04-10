@@ -1,38 +1,23 @@
 package ec.edu.ups.clases;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Institucion {
+
     private int id;
-    private String nombre;
+    private String nombreInstitucion;
     private List<String> sedes;
     private Direccion direccion;
     private List<Asignacion> asignaciones;
 
-    public Institucion() {}
+    public Institucion(){}
 
-    public Institucion(int id, String nombre, Direccion direccion) {
+    public Institucion(int id, String nombreInstitucion){
         this.id = id;
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.asignaciones = new ArrayList<>();
+        this.nombreInstitucion = nombreInstitucion;
         this.sedes = new ArrayList<>();
-    }
-
-    public Direccion getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.asignaciones = new ArrayList<>();
     }
 
     public int getId() {
@@ -43,24 +28,43 @@ public class Institucion {
         this.id = id;
     }
 
-    public void addAsignacion(Asignacion asignacion) {
-        this.asignaciones.add(asignacion);
+    public String getNombreInstitucion() {
+        return nombreInstitucion;
     }
+
+    public void setNombreInstitucion(String nombreInstitucion) {
+        this.nombreInstitucion = nombreInstitucion;
+    }
+
+    public List<String> getSedes() {
+        return sedes;
+    }
+
+    public void setSedes(List<String> sedes) {
+        this.sedes = sedes;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+    public void addDireccion(String callePrincipal, String calleSecundaria, String numeracion, String pais, String provincia, String ciudad, String tipoDireccion){
+        this.direccion = new Direccion(callePrincipal, calleSecundaria, numeracion, pais, provincia, ciudad, tipoDireccion);
+    }
+
+
     public List<Asignacion> getAsignaciones() {
         return asignaciones;
     }
-    public void addSede(String sede) {
-        this.sedes.add(sede);
-    }
-    public List<String> getSedes() {
-        return sedes;
+
+    public void setAsignaciones(List<Asignacion> asignaciones) {
+        this.asignaciones = asignaciones;
     }
 
     @Override
     public String toString() {
         return "Institucion{" +
                 "id=" + id +
-                ", nombre='" + nombre + '\'' +
+                ", nombreInstitucion='" + nombreInstitucion + '\'' +
                 ", sedes=" + sedes +
                 ", direccion=" + direccion +
                 ", asignaciones=" + asignaciones +

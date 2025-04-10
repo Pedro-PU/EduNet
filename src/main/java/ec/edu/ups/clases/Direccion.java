@@ -6,20 +6,20 @@ public class Direccion {
     private String callePrincipal;
     private String calleSecundaria;
     private String numeracion;
-    private String ciudad;
-    private String provincia;
     private String pais;
-    private TipoDireccion tipoDireccion;
+    private String provincia;
+    private String ciudad;
+    private String tipoDireccion;
 
-    public Direccion() {}
+    public Direccion(){}
 
-    public Direccion(String callePrincipal, String calleSecundaria, String numeracion, String ciudad, String provincia, String pais, TipoDireccion tipoDireccion) {
+    public Direccion(String callePrincipal, String calleSecundaria, String numeracion, String pais, String provincia, String ciudad, String tipoDireccion) {
         this.callePrincipal = callePrincipal;
         this.calleSecundaria = calleSecundaria;
         this.numeracion = numeracion;
-        this.ciudad = ciudad;
-        this.provincia = provincia;
         this.pais = pais;
+        this.provincia = provincia;
+        this.ciudad = ciudad;
         this.tipoDireccion = tipoDireccion;
     }
 
@@ -47,12 +47,12 @@ public class Direccion {
         this.numeracion = numeracion;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public String getPais() {
+        return pais;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
     public String getProvincia() {
@@ -63,19 +63,19 @@ public class Direccion {
         this.provincia = provincia;
     }
 
-    public String getPais() {
-        return pais;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setPais(String pais) {
-        this.pais = pais;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
-    public TipoDireccion getTipoDireccion() {
+    public String getTipoDireccion() {
         return tipoDireccion;
     }
 
-    public void setTipoDireccion(TipoDireccion tipoDireccion) {
+    public void setTipoDireccion(String tipoDireccion) {
         this.tipoDireccion = tipoDireccion;
     }
 
@@ -85,9 +85,9 @@ public class Direccion {
                 "callePrincipal='" + callePrincipal + '\'' +
                 ", calleSecundaria='" + calleSecundaria + '\'' +
                 ", numeracion='" + numeracion + '\'' +
-                ", ciudad='" + ciudad + '\'' +
-                ", provincia='" + provincia + '\'' +
                 ", pais='" + pais + '\'' +
+                ", provincia='" + provincia + '\'' +
+                ", ciudad='" + ciudad + '\'' +
                 ", tipoDireccion='" + tipoDireccion + '\'' +
                 '}';
     }

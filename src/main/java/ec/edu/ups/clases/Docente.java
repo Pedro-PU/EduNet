@@ -3,34 +3,35 @@ package ec.edu.ups.clases;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Docente extends Persona {
+public class Docente extends Persona{
+
     private List<String> titulosAcademicos;
     private List<String> areasDeEspecializacion;
 
-    public Docente() {
+    public Docente(){
+        this.titulosAcademicos = new ArrayList<>();
+        this.areasDeEspecializacion = new ArrayList<>();
+    }
+    public Docente(String cedula, String nombre, String apellido, String telefono, String correo){
+        super(cedula, nombre, apellido, telefono, correo);
         this.titulosAcademicos = new ArrayList<>();
         this.areasDeEspecializacion = new ArrayList<>();
     }
 
-    public Docente(String cedula, String nombre, String apellido, String telefono, String correoElectronico) {
-        super(cedula, nombre, apellido, telefono, correoElectronico);
-        this.titulosAcademicos = new ArrayList<>();
-        this.areasDeEspecializacion = new ArrayList<>();
-    }
-
-    public void addTituloAcademico(String tituloAcademico) {
-        this.titulosAcademicos.add(tituloAcademico);
-    }
-    public List<String> getTituloAcademicos() {
+    public List<String> getTitulosAcademicos() {
         return titulosAcademicos;
     }
 
-    public void addAreasDeEspecializacion(String areasDeEspecializacion) {
-        this.areasDeEspecializacion.add(areasDeEspecializacion);
+    public void setTitulosAcademicos(List<String> titulosAcademicos) {
+        this.titulosAcademicos = titulosAcademicos;
     }
 
     public List<String> getAreasDeEspecializacion() {
         return areasDeEspecializacion;
+    }
+
+    public void setAreasDeEspecializacion(List<String> areasDeEspecializacion) {
+        this.areasDeEspecializacion = areasDeEspecializacion;
     }
 
     @Override
